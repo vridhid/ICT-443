@@ -1,0 +1,19 @@
+Assignment 3: JavaScript library using JavaScript Libraries (30%)
+
+For this assignment you will need to produce a fully functional javaScript 
+library that will be able to demonstrate the following capabilities
+
+1) Uses JQuery UI (https://jqueryui.com/) in addition to HTML and CSS for a user
+interface
+2) User interface should incorporate animation and/or transitions.
+3) Users should be able to enter/edit/delete information that can be store locally.
+4) The application should use google visualization or D3.js to visualize data 
+(charts. Graphs etc).
+5) Demonstrates the usage of javaScript custom objects, prototypal inheritance and 
+JSON
+6) Extends a JavaScript object by adding a custom method to that object.
+
+Requirements:
+
+1. Package your HTML and JavaScript code as a zip file and submit on D2L dropbox 
+for assignment 3 .
