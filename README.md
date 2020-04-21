@@ -6,5 +6,7 @@ ICT 443 - JavaScript Advanced
 Course description cited from: https://conted.ucalgary.ca/search/publicCourseSearchDetails.do?method=load&courseId=4430358
 
 Assignment 1: 25 / 25 - A+
+
 Assignment 2: 23 / 25 - A
+
 Assignment 3: 30 / 30 - A+
