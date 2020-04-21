@@ -1,0 +1,211 @@
+<! DOCTYPE html>
+
+<html>
+
+  <head>
+  
+  
+    <title> Dynamic to-do list 1</title>
+      
+      <script src = "todolist.js" defer> </script>
+      
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     
+      <link type="text/css" rel="stylesheet" href="style.css"/>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+      
+      <script type="text/javascript">
+          
+          $(document).ready(function(){
+            $("input[id = 'process_button']").click(function(){
+                var radioValue = $("input[name='catRadio']:checked").val();
+                
+                $("#home-logo").css("display","block");
+                $("#work-logo").css("display","block");
+                $("#school-logo").css("display","block");
+                $("#else-logo").css("display","block");
+                
+                if(radioValue == "Home"){
+                    
+                    $("#header").css("background-color", "#c3a2c3");
+                    $("#home-logo").animate({opacity: '1'});
+                    $("#work-logo").animate({opacity: '0.2'});
+                    $("#school-logo").animate({opacity: '0.2'});
+                    $("#else-logo").animate({opacity: '0.2'});
+                    
+                } else if (radioValue == "Work"){
+                   $("#header").css("background-color", "#ffb3b3");
+                   $("#home-logo").animate({opacity: '0.2'});
+                   $("#work-logo").animate({opacity: '1'});
+                   $("#school-logo").animate({opacity: '0.2'});
+                   $("#else-logo").animate({opacity: '0.2'});
+                    
+                } else if (radioValue == "School"){
+                   $("#header").css("background-color", "#ffe0b3");
+                   $("#home-logo").animate({opacity: '0.2'});
+                   $("#work-logo").animate({opacity: '0.2'});
+                   $("#school-logo").animate({opacity: '1'});
+                   $("#else-logo").animate({opacity: '0.2'});
+                    
+                } else if (radioValue == "Else"){
+                   $("#header").css("background-color", "#b3d9ff");
+                    $("#home-logo").animate({opacity: '0.2'});
+                    $("#work-logo").animate({opacity: '0.2'});
+                    $("#school-logo").animate({opacity: '0.2'});
+                    $("#else-logo").animate({opacity: '1'});
+                }
+                
+                $("#icon-logo").hide();
+                $("#header").css("padding-top", "1px" );
+
+            });
+        });
+         
+    </script>
+      
+  </head>
+
+  <body>
+      
+    <div id= "header">
+	<div id = "icon-logo" class = "img" align = "center" > <img src = "icon-cal.png"> </div>
+	<h1> Dynamic to-do list </h1> 
+	</div> 
+   
+      <div id = "home-logo" class = "home_translate" style= "opacity: 0.2;"> <img src = "homepic.png"> </div>
+      <div id = "work-logo" class = "work_translate" style= "opacity: 0.2"> <img src = "workpic.png"> </div>
+      <div id = "school-logo" class = "school_translate" style= "opacity: 0.2;"> <img src = "schoolpic.png"> </div>
+      <div id = "else-logo" class = "else_translate" style= "opacity: 0.2;"> <img src = "otherpic.png"> </div>
+      
+      <br />
+      <form method="post" id ="form_all" onsubmit="return addItem(this)"> 
+      <div>
+        <label class = "container"> Home <input type="radio" id = "Home" name="catRadio" value="Home"> <span class = "checkmark"> </span> </label>
+          
+        <label class = "container"> Work <input type="radio" id = "Work" name="catRadio" value="Work">  <span class = "checkmark"> </span> </label>    
+            
+        <label class = "container"> School <input type="radio" id = "School" name="catRadio" value="School"> <span class = "checkmark"> </span> </label>
+          
+        <label class = "container"> Other <input type="radio" id = "Else" name="catRadio" value="Else"> <span class = "checkmark"> </span> </label>
+          
+        <input type = "button" id = "process_button" class ="button" value = "Process" onclick="javaScript:radioProcess()" />
+
+      </div>
+          
+<div class = "Home box" >               
+    
+    <div id = "homeHead"> 
+    <h3> To-do List for 'Home' tasks </h3>
+    </div>
+    
+    <div id = "ID_taskCategory"> </div>
+    
+</div>
+          
+<div class = "Work box" > 
+    
+    <div id = "workHead">
+        <h3> To-do List for 'Work' tasks </h3>
+    </div>
+    
+    <div id = "ID_taskCategory"> </div>
+          
+</div>
+
+<div class = "School box" > 
+    
+    <div id = "schoolHead"> 
+        <h3> To-do List for 'School' tasks </h3>
+    </div>
+    
+    <div id = "ID_taskCategory"> </div>
+    
+</div>
+          
+<div class = "Else box" > 
+    
+    <div id = "OtherHead"> 
+        <h3> To-do List for 'Other' tasks </h3>
+    </div>
+    
+    <div id = "ID_taskCategory"> </div>
+    
+</div>
+          
+          <div id = "Form Box" style="display:none;">
+          <div>
+          <div id = "ID_taskName">   
+          <strong> Task Name </strong>
+          <input type = "text" id="nameTxt" placeholder = "Title"/>
+          <br /> <br />
+          </div>
+          
+          <div id = "ID_taskDescription">
+          <strong> Task Description </strong> 
+          <input type = "text"  id="countTxt" placeholder="Describe the task here..." /> 
+          <br /><br />
+          </div>
+          
+          <div id = "ID_taskCategory">
+          <strong> Task Category </strong>
+          <input type = "text"  id="typeTxt" placeholder = "Home/Work/School/Other"/>
+          <br /><br />
+          </div>
+          
+          <div id = "ID_urgency">
+          <strong> Urgency </strong>  
+          <input type = "text"  id="orderTxt" placeholder = "Low/Medium/High"/>
+          <br /> <br />
+          </div>
+          
+          <div id = "ID_taskDate">
+          <strong> Task Date </strong>  
+          <input type = "text"  id="catTxt" placeholder="DD-MM-YYYY"/>
+          <br /> <br />  
+          </div> </div>
+              
+         </div>
+          
+        <div class = "Home box" >
+        <div id = "homeBtn"> 
+        <input type = "submit" class ="button" value = "Add Item" style= "background-color: #c3a2c3;"/>
+        <input type = "button" class ="button" value = "Update Item" style= "background-color: #c3a2c3;" onclick="javaScript:updateItem()" />
+        <input type = "button" class ="button" value = "Clear" style= "background-color: #c3a2c3; " onclick="javaScript:deleteAll()" />
+        <input type = "button" class ="button" value = "Save to Storage" style= "background-color: #c3a2c3;" onclick="javaScript:saveList1()" /> 
+        </div> </div>
+          
+        <div class = "School box" > 
+        <div id = "schoolBtn">
+        <input type = "submit" class ="button" value = "Add Item" style= "background-color: #ffe0b3;" />
+        <input type = "button" class ="button" value = "Update Item" style= "background-color: #ffe0b3;" onclick="javaScript:updateItem()" />
+        <input type = "button" class ="button" value = "Clear" style= "background-color: #ffe0b3; " onclick="javaScript:deleteAll()" />
+        <input type = "button" class ="button" value = "Save to Storage" style= "background-color: #ffe0b3;" onclick="javaScript:saveList1()" />
+        </div> </div>
+          
+        <div class = "Work box" > 
+        <div id = "workBtn"> 
+        <input type = "submit" class ="button" value = "Add Item" style= "background-color: #ffb3b3;" />
+        <input type = "button" class ="button" value = "Update Item" style= "background-color: #ffb3b3;" onclick="javaScript:updateItem()" />
+		<input type = "button" class ="button" value = "Clear"  style= "background-color: #ffb3b3; " onclick="javaScript:deleteAll()" />
+        <input type = "button" class ="button" value = "Save to Storage"  style= "background-color: #ffb3b3;" onclick="javaScript:saveList1()" />
+        </div> </div>
+          
+        <div class = "Else box" > 
+        <div id = "elseBtn"> 
+        <input type = "submit" class ="button" value = "Add Item" style= "background-color: #b3d9ff;" />
+        <input type = "button" class ="button" value = "Update Item" style= "background-color: #b3d9ff;" onclick="javaScript:updateItem()" />
+		<input type = "button" class ="button" value = "Clear" style= "background-color: #b3d9ff; " onclick="javaScript:deleteAll()" />
+		<input type = "button" class ="button" value = "Save to Storage" style= "background-color: #b3d9ff;" onclick="javaScript:saveList1()" />
+        </div> </div>
+      </form>
+	  
+      <div id = "shoppingListDiv"> </div>
+           
+  </body>
+
+</html>

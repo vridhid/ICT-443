@@ -1,0 +1,174 @@
+
+#header {
+ background-color: #e0e0eb; 
+ border-radius: 25px;
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
+	padding-top: 2%;
+}
+
+h1 {
+	color: black;
+	text-align: center;
+	text-shadow: 1px 1px gray;
+	font-size: 30px;
+	padding-bottom:2%;
+}
+h3 {
+    text-decoration: underline;
+    position: relative;
+    padding-left: 45px;
+    
+
+}
+
+#shoppingListDiv {
+    position:absolute; 
+    left:440px; 
+    top: 250px;
+}
+
+#nameTxt, #countTxt,#typeTxt,#orderTxt, #catTxt {
+	position: absolute;
+    left: 210px;
+    font-size: 15px;
+
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.hide {
+    display: none;
+}
+
+.box{
+    color: #fff;
+    display: none;
+    margin-top: 20px;
+}
+
+.Home, .Work, .School, .Else{ 
+    font-size: 20px;
+    background-color: transparent;
+    color: black;
+    width: 450px;
+}
+
+label { 
+    margin-right: 15px; 
+}
+
+.button {
+    display: inline-block;
+    padding: 7px 7px;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+   
+}
+
+.button:hover {
+    background-color: #3e8e41
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#home-logo{
+    position: absolute;
+    left:20px; 
+    top: 25px;
+}
+
+#work-logo{
+    position: absolute;
+    left:50px; 
+    top: 25px;
+}
+
+#school-logo{
+    position: absolute;
+    left:80px; 
+    top: 25px;
+}
+
+#else-logo{
+    position: absolute;
+    left:115px; 
+    top: 25px;
+}
