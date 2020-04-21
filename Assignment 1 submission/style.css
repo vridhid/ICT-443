@@ -1,0 +1,30 @@
+
+#header{
+ background-color: #e0e0eb; 
+ border-radius: 25px;
+}
+
+img{
+	max-height: 100%;
+	max-width: 100%;
+	padding-top: 2%;
+}
+h1{
+	color: black;
+	text-align: center;
+	text-shadow: 1px 1px gray;
+	font-size: 30px;
+	padding-bottom:2%;
+}
+
+#shoppingListDiv{
+    position:absolute; 
+    left:350px; 
+    top: 190px;
+}
+
+#nameTxt, #countTxt,#typeTxt,#orderTxt, #catTxt{
+	position: absolute;
+    left: 130px;
+}
+
