@@ -7,7 +7,7 @@ Instructions
 
 The goal of the assignment is to develop a dynamic to-do list
 
-1.	The program should allow users to enter a list of tasks to do. Each task
+1. The program should allow users to enter a list of tasks to do. Each task
 will have the following components:
 
   I.	Task name
@@ -17,25 +17,24 @@ will have the following components:
   V.	Task Category
   VI.	Task order
 
-2.	Tasks should be added by a form.
+2. Tasks should be added by a form.
 
-3.	Tasks should be displayed as they are entered on the same page (without
+3. Tasks should be displayed as they are entered on the same page (without
 doing a page submission or page refresh).
 
-4.	The user should be able to modify the tasks and the list. The users should 
+4. The user should be able to modify the tasks and the list. The users should 
 be have the following capabilities with the list:
 
-I.	Edit the task components
-II.	View the tasks
-III.	Remove / delete the tasks
-IV.	Reorder the tasks
+I. Edit the task components
+II. View the tasks
+III. Remove / delete the tasks
+IV. Reorder the tasks
 
-5.	The user should be able to clear all the tasks in the “to-do” list with
+5. The user should be able to clear all the tasks in the “to-do” list with
 one action.
-6.	The program should also let the user show and hide the list.
+6. The program should also let the user show and hide the list.
 
 Requirements:
 
 1. Package your HTML, JavaScript and CSS code as a zip file and submit to D2L
 dropbox for assignment 1.
-
