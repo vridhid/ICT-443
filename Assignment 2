@@ -1,0 +1,42 @@
+Assignment 2: JavaScript Objects, Object Oriented Concepts and HTML5 javaScript
+API (Application programming interface) (25%)
+
+The purpose of this exercise is to test your knowledge of changing objects using
+its prototypes and prototypal inheritance. You will be enhancing the Dynamic Task
+list that you have created in Assignment 1 with custom JavaScript object and extend 
+the functionality of your application by adding methods for tasks and using HTML5
+local storage functionality. The user interface will also be enhanced using 
+JavaScript drag and drop, mouse over and css.
+
+Instructions
+
+1) Creating prototypal inheritance: In assignment 1, you have created generic
+custom object for task that had a number of attributes (task name, description etc).
+For this assignment, you will demonstrate your knowledge of protypal inheritance by
+creating a top level task object and different types of tasks based on category. 
+For example, you may have a task category of Grocery that will have different 
+attributes than a task category of Education. However, both types of tasks will 
+need to inherit some generic attributes and methods from the parent task object.
+
+2) Dynamically change the user interface for task creation: Change the user
+interface to allow users to choose the category/type of task to be created and
+dynamically change the data entry from so that only fields relevant to the type 
+of tasks being entered are shown to the user. In addition, when the task is being
+shown provide visual distinguishing features to different types of tasks being 
+created.
+
+3) Enhance reordering of task by using HTML5 drag-and-drop: In assignment 1, 
+you have allowed users to reorder the tasks without drag and drop. For assignment
+1, enhance the recording functionally by allowing users to drag and drop tasks and
+reorder them.
+
+4) Save information into local storage: Provide the user to save the tasks and 
+related information to be saved to the HTML5 local storage. Test this by close 
+your browser and going to your page again and ensuring that the information 
+remains in the local storage. Enhance the “Clear tasks” functionality from 
+assignment 1 to clear the local storage.
+
+Requirements
+
+1. Package your HTML and JavaScript code as a zip file and submit on D2L dropbox 
+for assignment 2.
